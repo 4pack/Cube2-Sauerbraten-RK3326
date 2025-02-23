@@ -4,7 +4,7 @@ override CXXFLAGS+= -Wall -fsigned-char -fno-exceptions -fno-rtti
 PLATFORM= $(shell uname -s | tr '[:lower:]' '[:upper:]')
 PLATFORM_PREFIX= native
 
-INCLUDES= -Ishared -Iengine -Ifpsgame -Ienet/include
+INCLUDES= -Ishared -Iengine -Ifpsgame -Ienet/include -Iinclude
 
 STRIP=
 ifeq (,$(findstring -g,$(CXXFLAGS)))
