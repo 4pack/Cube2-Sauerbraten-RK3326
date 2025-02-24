@@ -121,7 +121,8 @@ static void compileglslshader(GLenum type, GLuint &obj, const char *def, const c
         parts[numparts++] = glslversions[i].header;
         break;
     }
-    conoutf("glversion %d", glslversion);
+    const GLubyte *glVersionString = glGetString(GL_VERSION);
+    conoutf("glversion %d - %s", glslversion, glVersionString);
     if(glslversion >= 130)
     {
         if(type == GL_VERTEX_SHADER) parts[numparts++] =
